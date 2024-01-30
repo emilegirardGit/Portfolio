@@ -1,0 +1,17 @@
+.align-home-left {
+    margin-top: 10%;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.name {
+    font-size: 4em;
+    font-weight: bold;
+    color: #f5f5f5;
+}
+
+.text {
+    font-size: 1em;
+    color: #f5f5f5;
+}
+
