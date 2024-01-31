@@ -1,0 +1,63 @@
+.projects-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 75%;
+  }
+
+  .projects-card:hover{
+    transform: scale(1.05);
+}
+
+  .projects-card_title {
+    font-size: 1rem;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .icons {
+    margin: 0 10px;
+  }
+
+    .icons:hover {
+        transform: scale(2.5);
+        animation-name: rotate;
+        animation-duration: 0.7s;
+    }
+
+  .technologies-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .technology {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: scale(2.5);
+    }
+  }
+

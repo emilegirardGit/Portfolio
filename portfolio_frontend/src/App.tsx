@@ -10,6 +10,9 @@ import Csharp from './views/Skills/Csharp';
 import RestAPI from './views/Skills/RestAPI';
 import Android from './views/Skills/Android';
 import IOS from './views/Skills/IOS';
+import Projects from './views/Projects';
+import FitWSarah from './views/Projects/FitWSarah';
+import Databases from './views/Skills/Databases';
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
           <Route path="/skills/restapi" element={<RestAPI />}/>
           <Route path="/skills/android" element={<Android />}/>
           <Route path="/skills/ios" element={<IOS />}/>
+          <Route path="/skills/databases" element={<Databases />}/>
+          <Route path="/projects" element={<Projects />}/>
+          <Route path="/projects/fitwsarah" element={<FitWSarah />}/>
         </Routes>
       </Router>
 
