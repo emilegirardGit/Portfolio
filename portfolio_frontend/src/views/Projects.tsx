@@ -5,8 +5,8 @@ import ProjectCard from '../components/ProjectCard';
 import { BiLogoSpringBoot } from "react-icons/bi";
 import { SiMysql } from "react-icons/si";
 import { IoLogoAngular } from "react-icons/io5";
-import { SiMongodb } from "react-icons/si";
-import { FaApple } from "react-icons/fa";
+import { SiMongodb, SiCsharp } from "react-icons/si";
+import { FaApple, FaUnity } from "react-icons/fa";
 import { IoLogoFirebase } from "react-icons/io5";
 import '../css/Projects.css';
 
@@ -29,7 +29,9 @@ const Projects = () => {
                 <ProjectCard project={{name: 'Travel Journal', description: 'A travel journal app',
                 technologies: [{Name: "ios", Icon: <FaApple />}, 
                                 {Name: "databases", Icon: <IoLogoFirebase />}]}} />
-
+                <ProjectCard project={{name: 'Golf Game', description: 'A golf game app',
+                technologies: [{Name: "csharp", Icon: <FaUnity />}, 
+                                {Name: "csharp", Icon: <SiCsharp />}]}} />
             </div>
         </div>
     )

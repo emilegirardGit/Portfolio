@@ -18,6 +18,7 @@ const sql = postgres({
     },
 });
 const routes = require('./Routes/Routes')(sql);
+const skills = require('./Routes/Skills')(sql);
 
 async function getPgVersion() {
     const result = await sql`select version()`;
@@ -32,6 +33,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/v1', routes);
+app.use('/api/v1', skills);
 
 app.listen(8000, () => {
     console.log(`Server is running on port 8000.`);

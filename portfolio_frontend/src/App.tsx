@@ -13,6 +13,12 @@ import IOS from './views/Skills/IOS';
 import Projects from './views/Projects';
 import FitWSarah from './views/Projects/FitWSarah';
 import Databases from './views/Skills/Databases';
+import PetClinic from './views/Projects/PetClinic';
+import TravelJournal from './views/Projects/TravelJournal';
+import GolfGame from './views/Projects/GolfGame';
+import Experiences from './Experiences';
+import Education from './Education';
+import Resume from './Resume';
 
 function App() {
   return (
@@ -30,6 +36,12 @@ function App() {
           <Route path="/skills/databases" element={<Databases />}/>
           <Route path="/projects" element={<Projects />}/>
           <Route path="/projects/fitwsarah" element={<FitWSarah />}/>
+          <Route path="/projects/petclinic" element={<PetClinic />}/>
+          <Route path="/projects/traveljournal" element={<TravelJournal />}/>
+          <Route path="/projects/golfgame" element={<GolfGame />}/>
+          <Route path="/experiences" element={<Experiences />}/>
+          <Route path="/education" element={<Education />}/>
+          <Route path="/resume" element={<Resume />}/>
         </Routes>
       </Router>
 
