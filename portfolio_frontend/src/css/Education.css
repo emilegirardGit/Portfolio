@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .box {
+    background: #333;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    color: white;
+  }
+  
+  
+  .line {
+    background: #777;
+    height: 2px;
+    flex-grow: 1;
+    position: relative;
+  }
+  
+  .line::before, .line::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    background: #777;
+    transform: rotate(45deg);
+  }
+  
+  .line::before {
+    left: -5px;
+  }
+  
+  .line::after {
+    right: -5px;
+  }
+  

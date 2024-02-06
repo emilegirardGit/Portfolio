@@ -1,7 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
 .align-home-left {
     margin-top: 10%;
     text-align: left;
     margin-left: 10%;
+}
+
+.align-home-right {
+    margin-top: 10%;
+    text-align: right;
+    margin-right: 10%;
+}
+
+.align-home-right img {
+    max-width: 300px;
+    height: auto;
 }
 
 .name {
@@ -13,5 +29,25 @@
 .text {
     font-size: 1em;
     color: #f5f5f5;
+    text-align: justify;
+    margin-right: 25%;
 }
 
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    gap: 2rem;
+    margin-top: 2%;
+}
+
+.social-icon {
+    size: 10rem;
+}
+
+.social-icon:hover {
+    transform: scale(2.5);
+    animation-name: rotate;
+    animation-duration: 0.7s;
+}
