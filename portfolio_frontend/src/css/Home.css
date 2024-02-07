@@ -16,6 +16,10 @@
 }
 
 .align-home-right img {
+    border-radius: 50%;
+}
+
+.align-home-right img {
     max-width: 300px;
     height: auto;
 }
