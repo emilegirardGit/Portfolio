@@ -14,9 +14,9 @@ import Databases from './views/Skills/Databases';
 import PetClinic from './views/Projects/PetClinic';
 import TravelJournal from './views/Projects/TravelJournal';
 import GolfGame from './views/Projects/GolfGame';
-import Experiences from './Experiences';
-import Education from './Education';
-import Resume from './Resume';
+import Experiences from './views/Experiences';
+import Education from './views/Education';
+import Resume from './views/Resume';
 
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";

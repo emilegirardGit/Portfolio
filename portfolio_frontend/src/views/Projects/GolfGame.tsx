@@ -1,8 +1,5 @@
 import React from 'react';
 import Nav from '../../components/Nav';
-import TravelJournalHomePage from '../../Images/TravelJournalHomePage.png';
-import TravelJournalEntry from '../../Images/JournalPictures.png';
-import TravelJournalMap from '../../Images/TravelJournalMap.png';
 import '../../css/TravelJournal.css';
 import { FaUnity } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
@@ -23,7 +20,7 @@ const GolfGame = () => {
     React.useEffect(() => {
         const getProject = async () => {
             try {
-                const data = await fetchProjectsInfo('TravelJournal');
+                const data = await fetchProjectsInfo('GolfGame');
                 setProject(data[0]);
             } catch (error) {
                 console.error('Failed to fetch skills:', error);
