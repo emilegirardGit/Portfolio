@@ -22,10 +22,10 @@ const Home = () => {
                 If anything here catches your eye, I'd love to chat about it!
                 </p>
                 <div className='social'>
-                    <a className='social-icon' href='https://github.com/emilegirardGit' target='_blank'>
+                    <a className='social-icon' href='https://github.com/emilegirardGit' target='_blank' rel="noreferrer noopener">
                         <div className='technology-2'><FaGithub /></div>
                     </a>
-                    <a className='social-icon' href='https://www.linkedin.com/in/emile-girard-743b131a3/' target='_blank'>
+                    <a className='social-icon' href='https://www.linkedin.com/in/emile-girard-743b131a3/' target='_blank' rel="noreferrer noopener">
                         <div className='technology-2'><FaLinkedin /></div>
                     </a>
                     <a className='social-icon' href='mailto:emilegirard42@gmail.com'>

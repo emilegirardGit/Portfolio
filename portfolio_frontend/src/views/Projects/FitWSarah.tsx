@@ -61,7 +61,7 @@ const FitWSarah = () => {
                 </div>
                 <div className='image'>
                     <h2>Visit Our Website</h2>
-                    <a href='https://fitwsarah-tm3c.onrender.com/' target='_blank'>
+                    <a href='https://fitwsarah-tm3c.onrender.com/' target='_blank' rel="noreferrer noopener">
                         <img src={FitWSarahLogo} alt='FitWSarahLogo' />
                     </a>
                 </div>
