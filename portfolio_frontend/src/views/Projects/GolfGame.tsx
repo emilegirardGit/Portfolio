@@ -49,7 +49,7 @@ const GolfGame = () => {
                         <a className='icons-2' href={`/skills/csharp`}>
                             <div className='technology-2'><SiCsharp /></div>
                         </a>
-                        <a className='icons-2' href='https://github.com/RichardDanon/Final_Game_Project'>
+                        <a className='icons-2' href='https://github.com/RichardDanon/Final_Game_Project' target='_blank' rel="noreferrer noopener">
                             <div className='technology-2'><FaGithub /></div>
                         </a>
                     </div>

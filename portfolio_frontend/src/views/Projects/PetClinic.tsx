@@ -5,7 +5,6 @@ import '../../css/FitWSarah.css';
 import { IoLogoAngular } from "react-icons/io5";
 import { BiLogoSpringBoot } from "react-icons/bi";
 import { SiMongodb } from "react-icons/si";
-import FitWSarahLogo from '../../Images/FitWSarah.png';
 import { FaGithub } from "react-icons/fa6";
 
 
@@ -54,7 +53,7 @@ const PetClinic = () => {
                         <a className='icons' href={`/skills/databases`}>
                             <div className='technology-2'><SiMongodb /></div>
                         </a>
-                        <a className='icons-2' href='https://github.com/cgerard321/champlain_petclinic' target='_blank'>
+                        <a className='icons-2' href='https://github.com/cgerard321/champlain_petclinic' target='_blank' rel="noreferrer noopener">
                             <div className='technology-2'><FaGithub /></div>
                         </a>
                     </div>

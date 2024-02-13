@@ -54,7 +54,7 @@ const FitWSarah = () => {
                         <a className='icons' href={`/skills/databases`}>
                             <div className='technology-2'><SiMysql /></div>
                         </a>
-                        <a className='icons-2' href='https://github.com/AlexeiTimbro/FitWSarah' target='_blank'>
+                        <a className='icons-2' href='https://github.com/AlexeiTimbro/FitWSarah' target='_blank' rel="noreferrer noopener">
                             <div className='technology-2'><FaGithub /></div>
                         </a>
                     </div>
