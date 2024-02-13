@@ -1,6 +1,6 @@
 export const fetchProjectsInfo = async (title: String) => {
     try {
-        const response = await fetch(`http://localhost:8000/api/v1/projects/${title}`, {
+        const response = await fetch(`https://portfolio-backend-5bzt.onrender.com/api/v1/projects/${title}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
