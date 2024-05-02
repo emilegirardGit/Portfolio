@@ -1,4 +1,3 @@
-import React from 'react';
 import Nav from '../../components/Nav';
 import TravelJournalHomePage from '../../Images/TravelJournalHomePage.png';
 import TravelJournalEntry from '../../Images/JournalPictures.png';
@@ -7,35 +6,11 @@ import '../../css/TravelJournal.css';
 import { FaApple } from "react-icons/fa";
 import { IoLogoFirebase } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa6";
-import { fetchProjectsInfo } from '../../api/fetchProjectsInfo';
-
-interface Project {
-    title: string;
-    description: string;
-    other_information: string[];
-}
-
+import { useTranslation } from "react-i18next";
 
 const TravelJournal = () => {
 
-    const [project, setProject] = React.useState<Project | null>(null);
-
-    React.useEffect(() => {
-        const getProject = async () => {
-            try {
-                const data = await fetchProjectsInfo('TravelJournal');
-                setProject(data[0]);
-            } catch (error) {
-                console.error('Failed to fetch skills:', error);
-            }
-        };
-
-        getProject();
-    }, []);
-
-    if (!project) {
-        return <div>Loading...</div>;
-    }
+    const { t } = useTranslation('projects');
 
     return (
         <div>
@@ -43,8 +18,8 @@ const TravelJournal = () => {
             <div className='travel'>
                 <h1>Travel Journal</h1>
                 <div className='travel-info'>
-                    <p>{project.description}</p>
-                    <h2>Technologies Used</h2>
+                    <p>{t('journalDesc')}</p>
+                    <h2>{t('tech')}</h2>
                     <div className='technologies-container-2'>
                         <a className='icons-2' href={`/skills/ios`}>
                             <div className='technology-2'><FaApple /></div>

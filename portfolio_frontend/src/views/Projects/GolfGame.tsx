@@ -1,38 +1,14 @@
-import React from 'react';
+import { t } from 'i18next';
 import Nav from '../../components/Nav';
 import '../../css/TravelJournal.css';
 import { FaUnity } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { SiCsharp } from "react-icons/si";
-import { fetchProjectsInfo } from '../../api/fetchProjectsInfo';
-
-interface Project {
-    title: string;
-    description: string;
-    other_information: string[];
-}
-
+import { useTranslation } from "react-i18next";
 
 const GolfGame = () => {
 
-    const [project, setProject] = React.useState<Project | null>(null);
-
-    React.useEffect(() => {
-        const getProject = async () => {
-            try {
-                const data = await fetchProjectsInfo('GolfGame');
-                setProject(data[0]);
-            } catch (error) {
-                console.error('Failed to fetch skills:', error);
-            }
-        };
-
-        getProject();
-    }, []);
-
-    if (!project) {
-        return <div>Loading...</div>;
-    }
+    const { t } = useTranslation('projects');
 
     return (
         <div>
@@ -40,8 +16,8 @@ const GolfGame = () => {
             <div className='travel'>
                 <h1>Golf Game</h1>
                 <div className='travel-info'>
-                    <p>{project.description}</p>
-                    <h2>Technologies Used</h2>
+                    <p>{t('golfDesc')}</p>
+                    <h2>{t('tech')}</h2>
                     <div className='technologies-container-2'>
                         <a className='icons-2' href={`/skills/csharp`}>
                             <div className='technology-2'><FaUnity /></div>

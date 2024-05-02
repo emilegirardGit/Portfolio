@@ -25,6 +25,7 @@ import {
   type ISourceOptions
 } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
+import { LanguageProvider } from './LanguageConfig/LanguageContext';
 
 function App() {
 
@@ -101,27 +102,29 @@ function App() {
         />
       )}
       <div style={{ position: 'relative', zIndex: 1 }}>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/skills" element={<Skills />}/>
-          <Route path="/skills/javascript" element={<Javascript />}/>
-          <Route path="/skills/java" element={<Java />}/>
-          <Route path="/skills/csharp" element={<Csharp />}/>
-          <Route path="/skills/restapi" element={<RestAPI />}/>
-          <Route path="/skills/android" element={<Android />}/>
-          <Route path="/skills/ios" element={<IOS />}/>
-          <Route path="/skills/databases" element={<Databases />}/>
-          <Route path="/projects" element={<Projects />}/>
-          <Route path="/projects/fitwsarah" element={<FitWSarah />}/>
-          <Route path="/projects/petclinic" element={<PetClinic />}/>
-          <Route path="/projects/traveljournal" element={<TravelJournal />}/>
-          <Route path="/projects/golfgame" element={<GolfGame />}/>
-          <Route path="/experiences" element={<Experiences />}/>
-          <Route path="/education" element={<Education />}/>
-          <Route path="/resume" element={<Resume />}/>
-        </Routes>
-      </Router>
+        <LanguageProvider>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Home />}/>
+              <Route path="/skills" element={<Skills />}/>
+              <Route path="/skills/javascript" element={<Javascript />}/>
+              <Route path="/skills/java" element={<Java />}/>
+              <Route path="/skills/csharp" element={<Csharp />}/>
+              <Route path="/skills/restapi" element={<RestAPI />}/>
+              <Route path="/skills/android" element={<Android />}/>
+              <Route path="/skills/ios" element={<IOS />}/>
+              <Route path="/skills/databases" element={<Databases />}/>
+              <Route path="/projects" element={<Projects />}/>
+              <Route path="/projects/fitwsarah" element={<FitWSarah />}/>
+              <Route path="/projects/petclinic" element={<PetClinic />}/>
+              <Route path="/projects/traveljournal" element={<TravelJournal />}/>
+              <Route path="/projects/golfgame" element={<GolfGame />}/>
+              <Route path="/experiences" element={<Experiences />}/>
+              <Route path="/education" element={<Education />}/>
+              <Route path="/resume" element={<Resume />}/>
+            </Routes>
+          </Router>
+        </LanguageProvider>
       </div>
     </div>
   );

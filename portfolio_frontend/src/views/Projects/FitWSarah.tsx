@@ -1,40 +1,15 @@
-import React from 'react';
 import Nav from '../../components/Nav';
-import { fetchProjectsInfo } from '../../api/fetchProjectsInfo';
 import '../../css/FitWSarah.css';
 import { FaReact } from "react-icons/fa";
 import { BiLogoSpringBoot } from "react-icons/bi";
 import { SiMysql } from "react-icons/si";
 import FitWSarahLogo from '../../Images/FitWSarah.png';
 import { FaGithub } from "react-icons/fa6";
-
-
-interface Project {
-    title: string;
-    description: string;
-    other_information: string[];
-}
+import { useTranslation } from "react-i18next";
 
 const FitWSarah = () => {
 
-    const [project, setProject] = React.useState<Project | null>(null);
-
-    React.useEffect(() => {
-        const getProject = async () => {
-            try {
-                const data = await fetchProjectsInfo('FitWSarah');
-                setProject(data[0]);
-            } catch (error) {
-                console.error('Failed to fetch skills:', error);
-            }
-        };
-
-        getProject();
-    }, []);
-
-    if (!project) {
-        return <div>Loading...</div>;
-    }
+    const { t } = useTranslation('projects');
 
     return (
         <div>
@@ -42,8 +17,8 @@ const FitWSarah = () => {
             <div className='fit'>
                 <h1>FitWSarah</h1>
                 <div className='fit-info'>
-                    <p>{project.description}</p>
-                    <h2>Technologies Used</h2>
+                    <p>{t('fitWSarah')}</p>
+                    <h2>{t('tech')}</h2>
                     <div className='technologies-container-2'>
                         <a className='icons' href={`/skills/javascript`}>
                             <div className='technology-2'><FaReact /></div>
