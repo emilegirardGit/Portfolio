@@ -1,7 +1,11 @@
 import Nav from '../../components/Nav';
 import '../../css/Skill.css';
+import { useTranslation } from "react-i18next";
 
 const Javascript = () => {
+    
+    const { t } = useTranslation('skills');
+
     return (
         <div className='skill'>
             <Nav />
@@ -9,19 +13,19 @@ const Javascript = () => {
             <div className="skill-grid">
                 <div className="skill-card">
                     <h2>Javascript</h2>
-                    <p>I learned the fundamentals of programming using JavaScript, including variables, control structures, functions, and object-oriented concepts. Gained experience with asynchronous programming using callbacks, promises, and async/await. Developed proficiency in manipulating the Document Object Model (DOM) to create dynamic and interactive web pages.</p>
+                    <p>{t('javascriptDesc')}</p>
                 </div>
                 <div className="skill-card">
                     <h2>React</h2>
-                    <p>Acquired the ability to build scalable front-end applications using React. Became adept at creating reusable components and managing application state with hooks and context. Learned to optimize performance with techniques like memoization and virtualization. Familiarized with React's ecosystem, including tool like React Router for navigation.</p>
+                    <p>{t('reactDesc')}</p>
                 </div>
                 <div className="skill-card">
                     <h2>Express.js</h2>
-                    <p>Developed server-side applications using Express.js. Learned to handle HTTP requests, route URLs, and serve static files. Gained experience with middleware. Acquired the ability to interact with databases using postges hosted database and create RESTful APIs.</p>
+                    <p>{t('expressDesc')}</p>
                 </div>
                 <div className="skill-card">
                     <h2>Typescript</h2>
-                    <p>Learned to write type-safe JavaScript using TypeScript. Acquired the ability to define custom types, interfaces, and enums.</p>
+                    <p>{t('typescriptDesc')}</p>
                 </div>
             </div>
         </div>

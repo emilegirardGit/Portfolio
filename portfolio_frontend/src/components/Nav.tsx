@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 const Nav: React.FC = () => {
 
   const { changeLanguage } = useLanguage();
+  const { t } = useTranslation('home');
 
   return (
     <nav className="navbar">
@@ -14,11 +15,11 @@ const Nav: React.FC = () => {
       </div>
       <div className="navbar-links">
         <ul>
-          <li><a href="/skills">Skills</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/experiences">Experiences</a></li>
-          <li><a href="/education">Education</a></li>
-          <li><a href="/resume">Resume</a></li>
+          <li><a href="/skills">{t('skill')}</a></li>
+          <li><a href="/projects">{t('project')}</a></li>
+          <li><a href="/experiences">{t('experience')}</a></li>
+          <li><a href="/education">{t('education')}</a></li>
+          <li><a href="/resume">{t('resume')}</a></li>
           <li><button onClick={() => changeLanguage('en')}>English</button>
             <button onClick={() => changeLanguage('fr')}>Français</button></li>
         </ul>

@@ -8,28 +8,31 @@ import { IoLogoAngular } from "react-icons/io5";
 import { SiMongodb, SiCsharp } from "react-icons/si";
 import { FaApple, FaUnity } from "react-icons/fa";
 import { IoLogoFirebase } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
 import '../css/Projects.css';
 
 const Projects = () => {
 
+    const { t } = useTranslation('home');
+
     return (
         <div>
             <Nav />
-            <h1 className='project-title'>Projects</h1>
-            <p className='project-text'>Here are some projects I have worked on:</p>
+            <h1 className='project-title'>{t('project')}</h1>
+            <p className='project-text'>{t('projectDesc')}</p>
             <div className='projects-grid'>
-                <ProjectCard project={{name: 'FitWSarah', description: 'A appointments app for a fitness trainer', 
-                technologies: [{Name: "javascript", Icon: <FaReact />}, 
-                                {Name: "restapi", Icon: <BiLogoSpringBoot />}, 
-                                {Name: "database", Icon: <SiMysql />}]}} />
-                <ProjectCard project={{name: 'Pet Clinic', description: 'A pet clinic app for managing appointments, inventory, pets and more', 
+                <ProjectCard project={{name: 'FitWSarah', description: t('fws'), 
+                                technologies: [{Name: "javascript", Icon: <FaReact />}, 
+                                                {Name: "restapi", Icon: <BiLogoSpringBoot />}, 
+                                                {Name: "database", Icon: <SiMysql />}]}} />
+                <ProjectCard project={{name: 'Pet Clinic', description: t('pet'), 
                 technologies: [{Name: "javascript", Icon: <IoLogoAngular />}, 
                                 {Name: "restapi", Icon: <BiLogoSpringBoot />}, 
                                 {Name: "database", Icon: <SiMongodb />}]}} />
-                <ProjectCard project={{name: 'Travel Journal', description: 'A travel journal app for keeping track of your trips and experiences',
+                <ProjectCard project={{name: 'Travel Journal', description: t('journal'),
                 technologies: [{Name: "ios", Icon: <FaApple />}, 
                                 {Name: "databases", Icon: <IoLogoFirebase />}]}} />
-                <ProjectCard project={{name: 'Golf Game', description: 'A multiplayer golf game',
+                <ProjectCard project={{name: 'Golf Game', description: t('golf'),
                 technologies: [{Name: "csharp", Icon: <FaUnity />}, 
                                 {Name: "csharp", Icon: <SiCsharp />}]}} />
             </div>

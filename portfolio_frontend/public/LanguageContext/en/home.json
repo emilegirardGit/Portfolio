@@ -1,0 +1,22 @@
+{
+    "intro": "Welcome to my portfolio! I'm currently a third year student at Champlain College, deep in the world of Computer Science. This portfolio is my personal playground and workshop—here's where you'll see the projects I've thrown my code and creativity into, the skills I've picked up along the way, and my experiences. Take a look around to get a glimpse of my coding adventures and the breakthroughs that keep me motivated. If anything here catches your eye, I'd love to chat about it!",
+    "skill": "Skills",
+    "project": "Projects",
+    "experience": "Experiences",
+    "education": "Education",
+    "resume": "Resume",
+    "resumeLong": "Resume",
+    "collegeDate": "August 2021 - June 2024",
+    "highSchoolDate": "August 2016 - June 2021",
+    "collegeProgram": "Computer Science and Technology",
+    "highSchoolProgram": "International Program",
+    "intershipDate": "March 2024 - May 2024",
+    "role": "Backend Developper Intership at Opal RT Technologies",
+    "projectDesc": "Here are some projects I have worked on:",
+    "fws": "A appointments application for a fitness trainer",
+    "pet": "A pet clinic app for managing appointments, inventory, pets and more",
+    "journal": "A travel journal app for keeping track of your trips and experiences",
+    "golf": "A multiplayer golf game",
+    "skillDesc": "Here are some of the skills I have acquired over the years:",
+    "download": "Download Resume"
+}

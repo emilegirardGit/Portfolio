@@ -1,22 +1,26 @@
 import Nav from '../components/Nav';
 import '../css/Education.css';
+import { useTranslation } from "react-i18next";
 
 const Education = () => {
+
+    const { t } = useTranslation('home');
+
     return (
     <div>
       <Nav />
       <div className="education">
-        <h1>Education</h1>
+        <h1>{t('education')}</h1>
       <div className="timeline">
         <div className="timeline-item">
-          <span className="tag">August 2021 - June 2024</span>
+          <span className="tag">{t('collegeDate')}</span>
           <h2>Champlain College</h2>
-          <p>Computer Science and Technology</p>
+          <p>{t('collegeProgram')}</p>
         </div>
         <div className="timeline-item">
-          <span className="tag">September 2016 - June 2021</span>
+          <span className="tag">{t('highSchoolDate')}</span>
           <h2>College Notre-Dame-de-Lourdes</h2>
-          <p>International Program</p>
+          <p>{t('highSchoolProgram')}</p>
         </div>
       </div>
       </div>

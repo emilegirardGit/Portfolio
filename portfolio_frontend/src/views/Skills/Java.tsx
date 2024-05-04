@@ -1,7 +1,11 @@
 import Nav from '../../components/Nav';
 import '../../css/Skill.css';
+import { useTranslation } from "react-i18next";
 
 const Java = () => {
+
+    const { t } = useTranslation('skills');
+
     return (
         <div className='skill'>
             <Nav />
@@ -9,11 +13,11 @@ const Java = () => {
             <div className="skill-grid">
                 <div className="skill-card">
                     <h2>Java</h2>
-                    <p>Gained a solid understanding of Java fundamentals, including syntax, operators, data types, and flow control. Mastered core concepts like object-oriented programming, encapsulation, inheritance, and polymorphism. Learned to develop robust console and GUI applications, and became proficient in handling exceptions and debugging to ensure reliable software.</p>
+                    <p>{t('javaDesc')}</p>
                 </div>
                 <div className="skill-card">
                     <h2>JavaFX</h2>
-                    <p>Developed a deep understanding of JavaFX as a platform for creating rich internet applications with a modern user interface. Learned to use FXML to define user interfaces and controllers to handle application logic. Became skilled at employing JavaFX's animation and media APIs to enhance the user experience. Built several desktop applications with sophisticated UI components and layouts.</p>
+                    <p>{t('javafxDesc')}</p>
                 </div>
             </div>
         </div>

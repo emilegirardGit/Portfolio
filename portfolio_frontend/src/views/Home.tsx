@@ -4,10 +4,12 @@ import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import myPhoto from '../Images/EmileGirard.jpg'
+import { useTranslation } from "react-i18next";
 
 
 const Home = () => {
     
+    const { t } = useTranslation('home');
 
     return (
         <div>
@@ -15,12 +17,7 @@ const Home = () => {
             <div className='container'>
             <div className='align-home-left'>
                 <h1 className='name'>Emile Girard</h1>
-                <p className='text'>
-                Welcome to my portfolio! I'm currently a third year student at Champlain College, deep in the world of Computer Science. 
-                This portfolio is my personal playground and workshop—here's where you'll see the projects I've thrown my code and creativity into, the skills I've picked up along the way, and my experiences.
-                Take a look around to get a glimpse of my coding adventures and the breakthroughs that keep me motivated. 
-                If anything here catches your eye, I'd love to chat about it!
-                </p>
+                <p className='text'>{t('intro')}</p>
                 <div className='social'>
                     <a className='social-icon' href='https://github.com/emilegirardGit' target='_blank' rel="noreferrer noopener">
                         <div className='technology-2'><FaGithub /></div>
