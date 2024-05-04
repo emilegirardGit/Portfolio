@@ -1,0 +1,22 @@
+{
+    "intro": "Bienvenue sur mon portfolio ! Je suis actuellement étudiant en troisième année à Champlain College, plongé dans le monde de l'informatique. Ce portfolio est mon terrain de jeu et mon atelier personnel — c'est ici que vous verrez les projets dans lesquels j'ai investi mon code et ma créativité, les compétences que j'ai acquises en chemin, et mes expériences. Jetez un œil pour avoir un aperçu de mes aventures de codage et des percées qui me gardent motivé. Si quelque chose ici attire votre attention, j'adorerais en discuter avec vous !",
+    "skill": "Compétences",
+    "project": "Projets",
+    "experience": "Expériences",
+    "education": "Éducation",
+    "resume": "CV",
+    "resumeLong": "Curriculum Vitae",
+    "collegeDate": "Août 2021 - Juin 2024",
+    "highSchoolDate": "Août 2016 - Juin 2021",
+    "collegeProgram": "Sciences Informatiques et Technologie",
+    "highSchoolProgram": "Programme International",
+    "intershipDate": "Mars 2024 - Mai 2024",
+    "role": "Stage de Développeur Backend chez Opal RT Technologies",
+    "projectDesc": "Voici quelques projets sur lesquels j'ai travaillé :",
+    "fws": "Une application de prise de rendez-vous pour un entraîneur de fitness",
+    "pet": "Une application de clinique pour animaux pour gérer les rendez-vous, l'inventaire, les animaux et plus encore",
+    "journal": "Une application de journal de voyage pour suivre vos voyages et expériences",
+    "golf": "Un jeu de golf multijoueur",
+    "skillDesc": "Voici quelques compétences que j'ai acquises au fil des années :",
+    "download": "Télécharger le CV"
+}
