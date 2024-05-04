@@ -1,4 +1,5 @@
 import './App.css';
+import './Loading.css';
 import Home from './views/Home';
 import Skills  from './views/Skills';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
@@ -30,6 +31,7 @@ import { LanguageProvider } from './LanguageConfig/LanguageContext';
 function App() {
 
   const [init, setInit] = useState(false);
+  const [particlesLoaded, setParticlesLoaded] = useState(false);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -39,8 +41,9 @@ function App() {
     });
   }, []);
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
+  const onParticlesLoaded = async (container?: Container): Promise<void> => {
     console.log(container);
+    setParticlesLoaded(true);
   };
 
   const options: ISourceOptions = useMemo(
@@ -50,14 +53,14 @@ function App() {
           value: "##0a0123",
         },
       },
-      fpsLimit: 120,
+      fpsLimit: 60,
       interactivity: {
         events: {
           onClick: {enable: true, mode: "push",},
           onHover: {enable: true, mode: "repulse",},
         },
         modes: {
-          push: {quantity: 4,},
+          push: {quantity: 2,},
           repulse: {distance: 200, duration: 0.4,},
         },
       },
@@ -71,14 +74,14 @@ function App() {
           straight: false,
         },
         number: {
-          density: {enable: true,},
-          value: 80,
+          density: {enable: true, area: 800,},
+          value: 40,
         },
         opacity: {value: 0.5,},
         shape: {type: "circle",},
         size: {value: { min: 1, max: 5 },},
       },
-      detectRetina: true,
+      detectRetina: false,
     }),
     [],
   );
@@ -89,7 +92,7 @@ function App() {
       {init && (
         <Particles
           id="tsparticles"
-          particlesLoaded={particlesLoaded}
+          particlesLoaded={onParticlesLoaded}
           options={options}
           style={{
             position: "absolute",
@@ -101,6 +104,7 @@ function App() {
           }}
         />
       )}
+      {particlesLoaded ? (
       <div style={{ position: 'relative', zIndex: 1 }}>
         <LanguageProvider>
           <Router>
@@ -126,6 +130,12 @@ function App() {
           </Router>
         </LanguageProvider>
       </div>
+      ) : (
+        <div className="loading-page">
+        <div className="spinner"></div>
+        Loading...
+      </div>
+      )}
     </div>
   );
 }
