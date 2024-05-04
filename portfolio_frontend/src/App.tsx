@@ -31,7 +31,6 @@ import { LanguageProvider } from './LanguageConfig/LanguageContext';
 function App() {
 
   const [init, setInit] = useState(false);
-  const [particlesLoaded, setParticlesLoaded] = useState(false);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -43,7 +42,6 @@ function App() {
 
   const onParticlesLoaded = async (container?: Container): Promise<void> => {
     console.log(container);
-    setParticlesLoaded(true);
   };
 
   const options: ISourceOptions = useMemo(
@@ -53,17 +51,7 @@ function App() {
           value: "##0a0123",
         },
       },
-      fpsLimit: 60,
-      interactivity: {
-        events: {
-          onClick: {enable: true, mode: "push",},
-          onHover: {enable: true, mode: "repulse",},
-        },
-        modes: {
-          push: {quantity: 2,},
-          repulse: {distance: 200, duration: 0.4,},
-        },
-      },
+      fpsLimit: 30,
       particles: {
         color: {value: "#ffffff",},
         links: {color: "#ffffff", distance: 150, enable: true, opacity: 0.5, width: 1,},
@@ -104,7 +92,6 @@ function App() {
           }}
         />
       )}
-      {particlesLoaded ? (
       <div style={{ position: 'relative', zIndex: 1 }}>
         <LanguageProvider>
           <Router>
@@ -130,12 +117,6 @@ function App() {
           </Router>
         </LanguageProvider>
       </div>
-      ) : (
-        <div className="loading-page">
-        <div className="spinner"></div>
-        Loading...
-      </div>
-      )}
     </div>
   );
 }
