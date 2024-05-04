@@ -15,7 +15,7 @@ const Experiences = () => {
         <div className="timeline-item">
           <span className="tag">{t('intershipDate')}</span>
           <h2>{t('role')}</h2>
-          <p>...</p>
+          <p>{t('intership')}</p>
         </div>
       </div>
       </div>

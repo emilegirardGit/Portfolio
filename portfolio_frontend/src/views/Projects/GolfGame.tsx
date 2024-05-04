@@ -1,4 +1,3 @@
-import { t } from 'i18next';
 import Nav from '../../components/Nav';
 import '../../css/TravelJournal.css';
 import { FaUnity } from "react-icons/fa";
