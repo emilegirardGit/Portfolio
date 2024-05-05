@@ -32,7 +32,6 @@ import { t } from 'i18next';
 function App() {
 
   const [init, setInit] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -44,7 +43,6 @@ function App() {
 
   const onParticlesLoaded = async (container?: Container): Promise<void> => {
     console.log(container);
-    setLoading(true);
   };
 
   const options: ISourceOptions = useMemo(
@@ -95,7 +93,6 @@ function App() {
           }}
         />
       )}
-      {loading ? (
       <div style={{ position: 'relative', zIndex: 1 }}>
         <LanguageProvider>
           <Router>
@@ -121,12 +118,6 @@ function App() {
           </Router>
         </LanguageProvider>
       </div>
-      ) : (
-        <div className="loading-page">
-          <div className="spinner"></div>
-          Loading...
-        </div>
-      )}
     </div>
   );
 }
