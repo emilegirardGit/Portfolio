@@ -1,3 +1,4 @@
+import Backbtn from '../../components/BackBtn';
 import Nav from '../../components/Nav';
 import '../../css/Skill.css';
 import { useTranslation } from "react-i18next";
@@ -9,6 +10,7 @@ const Java = () => {
     return (
         <div className='skill'>
             <Nav />
+            <Backbtn />
             <h1>Java</h1>
             <div className="skill-grid">
                 <div className="skill-card">

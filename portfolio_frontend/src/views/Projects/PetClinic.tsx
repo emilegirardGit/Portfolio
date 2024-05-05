@@ -5,6 +5,7 @@ import { BiLogoSpringBoot } from "react-icons/bi";
 import { SiMongodb } from "react-icons/si";
 import { FaGithub } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
+import Backbtn from '../../components/BackBtn';
 
 const PetClinic = () => {
 
@@ -13,6 +14,7 @@ const PetClinic = () => {
     return (
         <div>
             <Nav />
+            <Backbtn />
             <div className='fit'>
                 <h1>Pet Clinic</h1>
                 <div className='fit-info'>

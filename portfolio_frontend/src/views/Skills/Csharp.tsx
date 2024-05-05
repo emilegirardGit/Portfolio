@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from '../../components/Nav';
 import '../../css/Skills.css';
 import { useTranslation } from "react-i18next";
+import Backbtn from '../../components/BackBtn';
 
 const Csharp = () => {
 
@@ -10,6 +11,7 @@ const Csharp = () => {
      return (
         <div className='skill'>
             <Nav />
+            <Backbtn />
             <h1>C Sharp</h1>
             <div className="skill-grid">
                 <div className="skill-card">

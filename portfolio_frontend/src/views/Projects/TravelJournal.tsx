@@ -7,6 +7,7 @@ import { FaApple } from "react-icons/fa";
 import { IoLogoFirebase } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
+import Backbtn from '../../components/BackBtn';
 
 const TravelJournal = () => {
 
@@ -15,6 +16,7 @@ const TravelJournal = () => {
     return (
         <div>
             <Nav />
+            <Backbtn />
             <div className='travel'>
                 <h1>Travel Journal</h1>
                 <div className='travel-info'>

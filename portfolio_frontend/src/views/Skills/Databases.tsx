@@ -1,3 +1,4 @@
+import Backbtn from '../../components/BackBtn';
 import Nav from '../../components/Nav';
 import { useTranslation } from "react-i18next";
 
@@ -8,6 +9,7 @@ const Databases = () => {
     return (
         <div className='skill'>
             <Nav />
+            <Backbtn />
             <h1>Databases</h1>
             <div className="skill-grid">
                 <div className="skill-card">

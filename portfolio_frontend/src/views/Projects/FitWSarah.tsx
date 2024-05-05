@@ -6,6 +6,7 @@ import { SiMysql } from "react-icons/si";
 import FitWSarahLogo from '../../Images/FitWSarah.png';
 import { FaGithub } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
+import Backbtn from '../../components/BackBtn';
 
 const FitWSarah = () => {
 
@@ -14,6 +15,7 @@ const FitWSarah = () => {
     return (
         <div>
             <Nav />
+            <Backbtn />
             <div className='fit'>
                 <h1>FitWSarah</h1>
                 <div className='fit-info'>

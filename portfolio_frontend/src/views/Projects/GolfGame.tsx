@@ -4,6 +4,7 @@ import { FaUnity } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { SiCsharp } from "react-icons/si";
 import { useTranslation } from "react-i18next";
+import Backbtn from '../../components/BackBtn';
 
 const GolfGame = () => {
 
@@ -12,6 +13,7 @@ const GolfGame = () => {
     return (
         <div>
             <Nav />
+            <Backbtn />
             <div className='travel'>
                 <h1>Golf Game</h1>
                 <div className='travel-info'>
