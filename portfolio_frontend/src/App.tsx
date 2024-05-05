@@ -122,8 +122,9 @@ function App() {
         </LanguageProvider>
       </div>
       ) : (
-        <div className="loading">
-          <h1>Loading...</h1>
+        <div className="loading-page">
+          <div className="spinner"></div>
+          Loading...
         </div>
       )}
     </div>
