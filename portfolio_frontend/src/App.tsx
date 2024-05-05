@@ -1,5 +1,4 @@
 import './App.css';
-import './Loading.css';
 import Home from './views/Home';
 import Skills  from './views/Skills';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
@@ -27,7 +26,6 @@ import {
 } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import { LanguageProvider } from './LanguageConfig/LanguageContext';
-import { t } from 'i18next';
 
 function App() {
 
