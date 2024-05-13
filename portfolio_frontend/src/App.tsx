@@ -46,7 +46,22 @@ function App() {
           value: "##0a0123",
         },
       },
-      fpsLimit: 30,
+      fpsLimit: 60,
+      interactivity: {
+        events: {
+          onHover: {
+            enable: true,
+            mode: "repulse",
+          },
+        },
+      },
+      modes: {
+        repulse: {
+          distance: 50,
+          duration: 0.4,
+          speed: 2,
+        },
+      },
       particles: {
         color: {value: "#ffffff",},
         links: {color: "#ffffff", distance: 150, enable: true, opacity: 0.5, width: 1,},
@@ -58,7 +73,7 @@ function App() {
         },
         number: {
           density: {enable: true, area: 800,},
-          value: 40,
+          value: 60,
         },
         opacity: {value: 0.5,},
         shape: {type: "circle",},
