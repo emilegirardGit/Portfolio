@@ -18,7 +18,7 @@ import Experiences from './views/Experiences';
 import Education from './views/Education';
 import Resume from './views/Resume';
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
   type Container,
@@ -29,13 +29,9 @@ import { LanguageProvider } from './LanguageConfig/LanguageContext';
 
 function App() {
 
-  const [init, setInit] = useState(false);
-
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
     });
   }, []);
 
@@ -76,7 +72,6 @@ function App() {
 
   return (
     <div className="App">
-      {init && (
         <Particles
           id="tsparticles"
           particlesLoaded={onParticlesLoaded}
@@ -90,7 +85,6 @@ function App() {
             zIndex: -1
           }}
         />
-      )}
       <div style={{ position: 'relative', zIndex: 1 }}>
         <LanguageProvider>
           <Router>
